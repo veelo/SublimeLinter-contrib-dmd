@@ -37,6 +37,15 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
+You may pass any [arguments and switches][compile-flags] to `dmd` by configuring the `args` linter setting, like so:
+```
+            "dmd": {
+                "@disable": false,
+                "args": ["-I/my/include/dir", "-dip25"],
+                "excludes": []
+            }
+```
+
 <!---
 In addition to the standard SublimeLinter settings, SublimeLinter-contrib-dmd provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
 
@@ -73,3 +82,4 @@ Thank you for helping out!
 [linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 [inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
 [user-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#user-settings
+[compile-flags]: https://dlang.org/dmd-windows.html#switches
