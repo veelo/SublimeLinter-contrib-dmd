@@ -10,7 +10,7 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [dmd](http
 1. Mixins are expanded.
 1. Templates are validated.
 1. Deprecation warnings are included.
-1. The "did you mean ..." assistance appears right where it is most helpful.
+1. The "did you mean &hellip;" assistance appears right where it is most helpful.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
@@ -18,7 +18,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `dmd` is installed on your system. To install `dmd`, go to https://dlang.org/download.html.
 
-**Note:** This plugin wsa developed using `dmd` 2.076.1.
+**Note:** This plugin was developed using `dmd` 2.076.1.
 
 ### Linter configuration
 In order for `dmd` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
