@@ -12,6 +12,9 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [dmd](http
 1. Deprecation warnings are included.
 1. The "did you mean &hellip;" assistance appears right where it is most helpful.
 
+![warnings](screenshots/warnings.png)
+![errors](screenshots/errors.png)
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
