@@ -38,13 +38,15 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `dmd`. Among the entries you should see `SublimeLinter-contrib-dmd`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
+This plugin looks for [DUB project configuration files][dub] in open folders and adds any required import paths that can be determined from those automatically. It is possible to pass additional arguments to dmd using a setting.
+
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
 You may pass any [arguments and switches][compile-flags] to `dmd` by configuring the `args` linter setting, like so:
 ```
             "dmd": {
                 "@disable": false,
-                "args": ["-I/my/include/dir", "-dip25"],
+                "args": ["-I/my/additional/include/dir", "-dip25"],
                 "excludes": []
             }
 ```
@@ -86,3 +88,4 @@ Thank you for helping out!
 [inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
 [user-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#user-settings
 [compile-flags]: https://dlang.org/dmd-windows.html#switches
+[dub]: https://code.dlang.org/getting_started
