@@ -7,7 +7,7 @@
 #
 # License: MIT
 #
-# Functionality for reading dub configurations was copied from
+# Functionality for reading DUB configurations was copied from
 # github.com/MoritzMaxeiner/sublide, courtesy Moritz Maxeiner.
 
 """This module exports the Dmd plugin class."""
@@ -44,7 +44,7 @@ class Dmd(Linter):
     package_filenames = ['dub.json', 'package.json', 'dub.sdl']
 
     def get_user_args(self, settings=None):
-        """Return any args the user specifies in settings as a list, supplemented with those reported by dub."""
+        """Return any args the user specifies in settings as a list, supplemented with those reported by DUB."""
         window_folders = self.view.window().folders()
         for folder in window_folders:
             if folder not in type(self).cached_include_paths.keys():
@@ -57,7 +57,7 @@ class Dmd(Linter):
 
     @classmethod
     def get_include_paths(cls, folder):
-        """Return a set of include paths read from dub configuration files."""
+        """Return a set of include paths read from DUB configuration files."""
         include_paths = set()
         if cls.has_package_file(folder):
             description = cls.describe(folder)
@@ -70,7 +70,7 @@ class Dmd(Linter):
 
     @classmethod
     def has_package_file(cls, path):
-        """Look for dub configuration files in path."""
+        """Look for DUB configuration files in path."""
         for f in cls.package_filenames:
             p = os.path.join(path, f)
             if (os.path.exists(p)):
@@ -79,7 +79,7 @@ class Dmd(Linter):
 
     @classmethod
     def describe(cls, path):
-        """Let dub describe the project."""
+        """Let DUB describe the project."""
         description = cls.__exec(['describe', '--root=' + path, "--vquiet"])
         if len(description) == 0:
             return None
@@ -90,7 +90,7 @@ class Dmd(Linter):
 
     @classmethod
     def __exec(cls, args):
-        """Execute dub."""
+        """Execute DUB."""
         app_path = "dub"
         # if not util.which(app_path):
         #     print(cls.name() + ': DUB functionality not available, application \"' + app_path + '\" not found.')
@@ -102,6 +102,3 @@ class Dmd(Linter):
             return []
         else:
             return instance.communicate()[0].decode('utf-8')
-
-    def on_post_save(view):
-        print('on_post_save')
