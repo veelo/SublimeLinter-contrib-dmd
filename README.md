@@ -1,7 +1,7 @@
 SublimeLinter-contrib-dmd
 =========================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-dmd.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-dmd)
+[![Build Status](https://travis-ci.org/veelo/SublimeLinter-contrib-dmd.svg?branch=master)](https://travis-ci.org/veelo/SublimeLinter-contrib-dmd)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [dmd](https://dlang.org), the reference compiler for the D programming language. It will be used with files that have the “D” syntax. These will be parsed by `dmd` and any errors and warnings will be shown inline and optionally as [tooltips][user-settings]. The advantages to pure syntax linters are:
 
