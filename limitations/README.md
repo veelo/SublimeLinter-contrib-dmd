@@ -4,12 +4,12 @@ This directory contains some files displaying some known limitations of this plu
 
 Each sample contains in its first line the `dmd` commandline used to build the sample.
 
-## Build (Powershell)
-You can use `build.ps` to build all samples and see for yourself that they're valid D programs.
+## Build (python)
+You need `dmd` in your path to use the build script `build.py`. This script can be used to build all samples so you see for yourself that they're valid D programs.
 
-* `build.ps1` Build all samples without running them. Output directory is `./_build`.
-* `build.ps1 -Run` Build and run all samples in turn.
-* `build.ps1 -Clean` Remove build output instead of building.
+* `build.py` Build all samples without running them. Default output directory is `./_build`.
+* `build.py -Run` Build and run all samples in turn.
+* `build.py -Clean` Remove build output instead of building.
 
 They have been tested with dmd v2.077.1.
 
