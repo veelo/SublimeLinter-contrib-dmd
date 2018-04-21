@@ -1,0 +1,6 @@
+import std.stdio;
+
+void mixin_import_func()
+{
+  writeln("Hello from mixin_import_func in mixin_import.txt");
+}
