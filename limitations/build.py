@@ -1,9 +1,14 @@
+"""
+Builds and optionally runs all limitation samples.
+"""
+
 import sys, os, glob, subprocess, shutil, argparse
 from glob import glob
 
 IS_WINDOWS = os.name == 'nt'
 
 def main(run, clean, code_dir, build_dir):
+    """Main entry point to build and optionally run all samples."""
     os.chdir(code_dir)
     if clean:
         if os.path.exists(build_dir):
@@ -53,7 +58,8 @@ if __name__ == '__main__':
     parser.add_argument('--clean', action='store_true', default=False,
                         help='instead of building/running, remove the build dir')
     parser.add_argument('--build-dir', default=default_build_dir,
-                        help='output directory for build results. Note: working directory during build is: ' + os.path.abspath(code_dir))
+                        help='output directory for build results. ' + \
+                        'Note: working directory during build is: ' + os.path.abspath(code_dir))
     args = parser.parse_args()
 
     main(args.run, args.clean, code_dir, args.build_dir)
