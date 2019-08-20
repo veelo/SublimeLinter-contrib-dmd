@@ -21,7 +21,9 @@ from subprocess import Popen, PIPE
 class Dmd(Linter):
     """Provides an interface to dmd, the reference D compiler from dlang.org."""
 
-    syntax = 'd'
+    defaults = {
+        'selector': 'source.d'
+    }
     cmd = ('dmd', '-o-', '-w', '-wi', '-vcolumns', '*')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
